@@ -2,5 +2,5 @@
 .classpath
 .class
 .settings
-bin
+bin/
 .env
