@@ -18,7 +18,6 @@ public class Exec {
 	public static void main(String[] args) throws Exception {
 		getParameters(filePath);
 		TelegramSendMessage telegramSendMessage = new TelegramSendMessage(token, channelName);
-//		https://api.telegram.org/bot1462150365:AAEcq2HQXEtuhvWCnDZFGN5FHfgneDZCTcA/sendMessage?chat_id=-1001486526888&text=test2
 		telegramSendMessage.sendMessage("qqq");
 	}
 	
