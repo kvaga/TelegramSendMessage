@@ -9,7 +9,7 @@ import ru.kvaga.telegram.sendmessage.TelegramSendMessage;
 import ru.kvaga.telegram.sendmessage.TelegramSendMessageException.SendMessageException;
 
 public class Exec {
-
+//
 	private static String filePath="TelegramSendMessage.env";
 	static String token;
 	static String channelName;
