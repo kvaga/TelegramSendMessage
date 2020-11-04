@@ -24,11 +24,12 @@ public class TelegramSendMessage {
 	}
 
 	public void sendMessage(String text) throws Exception  {
-		URL = URL + String.format(textTemplate, text);
-//		System.out.println(String.format(URL, text));
+		String _url = URL;
+		_url = _url + String.format(textTemplate, text);
+		System.out.println(String.format(_url, text));
 
 		try {
-			URL url = new URL(URL);
+			URL url = new URL(_url);
 			HttpURLConnection con = (HttpURLConnection) url.openConnection();
 			con.setRequestMethod("GET");
 			BufferedReader br = new BufferedReader(new InputStreamReader(con.getInputStream()));
@@ -41,10 +42,10 @@ public class TelegramSendMessage {
 			String response = sb.toString();
 			if (!response.contains("\"ok\":true")) {
 				throw new TelegramSendMessageException.SendMessageException(
-						String.format("Couldn't send message for URL: %s. Reponse: %s", URL, response));
+						String.format("Couldn't send message for URL: %s. Reponse: %s", _url, response));
 			}
 		} catch (Exception e) {
-			throw new Exception(String.format("Couldn't send message for URL: %s. ", URL) + e.getMessage());
+			throw new Exception(String.format("Couldn't send message for URL: %s. ", _url) + e.getMessage());
 		}
 	}
 

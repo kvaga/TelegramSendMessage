@@ -19,7 +19,9 @@ public class Exec {
 		getParameters(filePath);
 		System.out.print("Sending message ... ");
 		TelegramSendMessage telegramSendMessage = new TelegramSendMessage(token, channelName);
-		telegramSendMessage.sendMessage("test");
+		for(int i=0;i<5;i++) {
+			telegramSendMessage.sendMessage(""+i);
+		}
 		System.out.println("[OK]. The message was sent");
 	}
 	
