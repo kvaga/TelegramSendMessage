@@ -13,7 +13,7 @@ import ru.kvaga.telegram.sendmessage.TelegramSendMessageException.SendMessageExc
 public class TelegramSendMessage {
 	private String channelToken;
 	private String channelName;
-	private String URLTemplate = "https://api.telegram.org/bot%s/sendMessage?chat_id=%s";
+	private String URLTemplate = "https://api.telegram.org/bot%s/sendMessage?chat_id=%s&parse_mode=html";
 	private String textTemplate = "&text=%s";
 	private String URL;
 
