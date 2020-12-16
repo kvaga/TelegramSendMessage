@@ -15,7 +15,7 @@ public class TelegramSendMessage {
 	private String channelName;
 	private String URLTemplate = "https://api.telegram.org/bot%s/sendMessage?chat_id=%s&parse_mode=html";
 	private String textTemplate = "&text=%s";
-	private String URL;
+	private String URL;;
 
 	public TelegramSendMessage(String channelToken, String channelName) {
 		this.channelToken = channelToken;
