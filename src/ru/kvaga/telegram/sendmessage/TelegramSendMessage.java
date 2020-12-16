@@ -26,7 +26,7 @@ public class TelegramSendMessage {
 	public void sendMessage(String text) throws Exception  {
 		String _url = URL;
 		_url = _url + String.format(textTemplate, text);
-//		System.out.println(String.format(_url, text));
+//		System.out.println(String.format(_url, text)) ;
 
 		try {
 			URL url = new URL(_url);
