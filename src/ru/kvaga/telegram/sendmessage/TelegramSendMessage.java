@@ -11,6 +11,8 @@ import java.net.URL;
 import ru.kvaga.telegram.sendmessage.TelegramSendMessageException.SendMessageException;
 
 public class TelegramSendMessage {
+	public static String LINEBREAK="%0A";
+	
 	private String channelToken;
 	private String channelName;
 	private String URLTemplate = "https://api.telegram.org/bot%s/sendMessage?chat_id=%s&parse_mode=html";
