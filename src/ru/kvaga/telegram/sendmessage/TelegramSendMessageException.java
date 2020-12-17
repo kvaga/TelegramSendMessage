@@ -10,4 +10,10 @@ public class TelegramSendMessageException extends Exception{
 			super(message);
 		}
 	}
+	
+	public static class UnsupportedParameterException extends TelegramSendMessageException {
+		public UnsupportedParameterException(String message) {
+			super(message);
+		}
+	}
 }
