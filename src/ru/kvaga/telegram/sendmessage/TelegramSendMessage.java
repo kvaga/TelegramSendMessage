@@ -49,7 +49,7 @@ public class TelegramSendMessage {
 		}
 		
 		if(web_page_preview_mode==WEB_PAGE_PREVIEW_DISABLE) {
-			URLTemplate+="&disable_web_page_preview=None";
+			URLTemplate+="&disable_web_page_preview=True";
 		}else if(web_page_preview_mode==WEB_PAGE_PREVIEW_ENABLE) {
 			;
 		}else {

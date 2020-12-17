@@ -18,11 +18,16 @@ public class Exec {
 	public static void main(String[] args) throws Exception {
 		getParameters(filePath);
 		System.out.print("Sending message ... ");
-		TelegramSendMessage telegramSendMessage = new TelegramSendMessage(token, channelName);
-//		TelegramSendMessage telegramSendMessage = new TelegramSendMessage(token, channelName, TelegramSendMessage.PARSE_MODE_NONE, TelegramSendMessage.WEB_PAGE_PREVIEW_ENABLE);
+//		TelegramSendMessage telegramSendMessage = new TelegramSendMessage(token, channelName);
+		TelegramSendMessage telegramSendMessage = new TelegramSendMessage(
+				token, 
+				channelName, 
+				TelegramSendMessage.PARSE_MODE_HTML, 
+				TelegramSendMessage.WEB_PAGE_PREVIEW_DISABLE);
 
 		for(int i=0;i<1;i++) {
-			telegramSendMessage.sendMessage("Some text <a href='ya.ru'>link</a> some other text"+i);
+//			telegramSendMessage.sendMessage("Some text <a href='https://ya.ru'>link</a> some other text"+i);
+			telegramSendMessage.sendMessage("Stock: <a href='https://tinkoff.ru/invest/stocks/YNDX/'>link</a> some other text");
 		}
 		System.out.println("[OK]. The message was sent");
 	}
